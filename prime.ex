@@ -1,5 +1,4 @@
 defmodule First do
-
   def range_first(limit) do
     sieve1(Enum.to_list(2..limit), [])
   end
@@ -11,11 +10,9 @@ defmodule First do
                                             rem(t, h) != 0 end), p)]
     end
   end
-
 end
 
 defmodule Second do
-
   def range_second(limit) do
     sieve2(Enum.to_list(2..limit), [])
   end
@@ -31,11 +28,9 @@ defmodule Second do
       end
     end
   end
-
 end
 
 defmodule Third do
-
   def range_third(limit) do
    sieve3(Enum.to_list(2..limit), [])
     |> Enum.reverse
@@ -52,7 +47,6 @@ defmodule Third do
       end
     end
   end
-
 end
 
 defmodule Benchmark do
