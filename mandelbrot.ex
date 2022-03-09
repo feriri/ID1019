@@ -73,7 +73,7 @@ end
 defmodule Color do
     @doc """
     Convert a scalar, from 0 to max, to a suitabe color
-    represented as {r ,g ,b} where each element is 0..255.
+    represented as {r,g,b} where each element is 0..255.
     """
     def convert(n, limit) do
         a = n/limit*4
@@ -92,7 +92,7 @@ end
 defmodule PPM do
     @doc """
     The image is a list of rows, each row a list
-    of tuples {R,G,B}. The RGB values are 0-255.
+    of tuples {r,g,b}. The rgb values are 0-255.
     """
     def write(name, image) do
         height = length(image)
