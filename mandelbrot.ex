@@ -59,7 +59,7 @@ defmodule Brot do
     @doc """
     given the complex number c and the maximum number
     of iterations limit return the value n at which
-    |zn| > 2 or 0 if it does not for any i < limit
+    |zn| > 2 or 0 if it does not for any i < limit.
     """
     defp brot(n, zn, c, limit) do
         cond do
