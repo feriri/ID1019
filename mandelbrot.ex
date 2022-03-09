@@ -25,7 +25,9 @@ defmodule Mandel do
     """
     def mandelbrot(width, height, x, y, k, depth) do
         trans = fn(w, h) ->
-            Cmplx.new(x + k * (w - 1), y - k * (h - 1))
+            re = x + k * (w - 1)
+            im = y - k * (h - 1)
+            Cmplx.new(re, im)
         end
         rows(width, height, trans, depth, [])
     end
