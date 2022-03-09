@@ -6,15 +6,15 @@ defmodule Cmplx do
     """
     def new(re, im) do {re, im} end
 
-    def add({ar, ai}, {br, bi}) do  # (a + bi) + (c + di) = (a + c) + (b + d)i
+    def add({ar, ai}, {br, bi}) do                              # (a + bi) + (c + di) = (a + c) + (b + d)i
         {ar + br, ai + bi}
     end
 
-    def sqr({re, im}) do            # (a + bi)^2 = (a^2 - b^2) + (2ab)i
+    def sqr({re, im}) do                                        # (a + bi)^2 = (a^2 - b^2) + (2ab)i
         {:math.pow(re, 2) - :math.pow(im, 2), 2*re*im}
     end
 
-    def abs({re, im}) do            # |z| = sqr(a^2 + b^2)
+    def abs({re, im}) do                                        # |z| = sqr(a^2 + b^2)
         :math.sqrt(:math.pow(re, 2) + :math.pow(im, 2))
     end
 end
